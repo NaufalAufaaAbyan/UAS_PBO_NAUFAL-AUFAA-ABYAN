@@ -8,19 +8,21 @@ namespace UAS_PBO_NAUFAL_AUFAA_ABYAN
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
-            Login login = new Login();
-            login.tampilForm();
-            if(login.apakahLoginBerhasil())
+            Login login = new Login(); // Bikin objek dari class Login, namanya login
+            
+            login.tampilForm(); // Panggil method tampilForm buat nampilin form dan ambil input dari user
+            
+            if(login.apakahLoginBerhasil()) // Bikin objek dari class Login, namanya login
             {
-                Console.WriteLine("Login Berhasil. Selamat Datang, " + login.username);
+                Console.WriteLine("Login Berhasil. Selamat Datang, " + login.username); // Bikin objek dari class Login, namanya login
             }
-            else
+            else // Kalo gagal
             {
-                Console.WriteLine("Login Gagal");
+                Console.WriteLine("Login Gagal"); // Tampilkan pesan gagal
             }
-            Console.ReadKey();
+            Console.ReadKey(); // Biar console nggak langsung nutup, tunggu user pencet tombol
         }
     }
 }
