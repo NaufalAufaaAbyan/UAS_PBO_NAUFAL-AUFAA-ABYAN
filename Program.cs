@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,17 +12,18 @@ namespace UAS_PBO_NAUFAL_AUFAA_ABYAN
         {
             Login login = new Login(); // Bikin objek dari class Login, namanya login
             
-            login.tampilForm(); // Panggil method tampilForm buat nampilin form dan ambil input dari user
+            login.tampilForm(); // Tampilkan form login dan ambil input user
             
-            if(login.apakahLoginBerhasil()) // Bikin objek dari class Login, namanya login
+            if (login.apakahLoginBerhasil()) // Cek apakah username dan password benar
             {
-                Console.WriteLine("Login Berhasil. Selamat Datang, " + login.username); // Bikin objek dari class Login, namanya login
+                Console.WriteLine("Login Berhasil. Selamat Datang, " + login.username); // Tampilkan pesan sukses login
             }
-            else // Kalo gagal
+            else // Kalau login gagal
             {
                 Console.WriteLine("Login Gagal"); // Tampilkan pesan gagal
             }
-            Console.ReadKey(); // Biar console nggak langsung nutup, tunggu user pencet tombol
+
+            Console.ReadKey(); // Pause biar console gak langsung nutup
         }
     }
 }
